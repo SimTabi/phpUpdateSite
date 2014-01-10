@@ -1,0 +1,40 @@
+# ------------ phpUpdateSite ------------
+# version	0.1
+# author	hannes eilers
+# --------------------------------------
+#
+# ---------------------------------------
+# DESCRIPTION
+# ---------------------------------------
+phpUpdateSite is a simple php script to enable
+api access to software update files.
+
+It stores files for each version of a program
+in a directory.
+
+Using the api calls external programs can
+request available update pages (one for each
+program for example), available versions of
+one page or files inside a version update
+directory.
+
+The external program can use the offered file
+urls to download the files and use them for
+any kind of update.
+
+# ---------------------------------------
+# PARAMETERS
+# ---------------------------------------
+Use these parameters of webserver page
+request to get several information.
+If you don't set a parameter all available
+update pages are listed.
+
+p	Use to show versions of a page
+	For example: update.php?p=HELP
+
+v	Use to show update files of version
+	inside a page
+	For example: update.php?p=HELP&v=0.1
+
+# ---------------------------------------
