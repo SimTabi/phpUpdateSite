@@ -30,11 +30,20 @@ request to get several information.
 If you don't set a parameter all available
 update pages are listed.
 
-p	Use to show versions of a page
+p	Use to show versions of a page.
 	For example: update.php?p=HELP
+	
+lv	Use in combination with parameter p
+	to get latest version number.
+	For example: update.php?p=HELP&lv
+	
+l	Use in combination with parameter p
+	to get latest version update files.
+	For example: update.php?p=HELP&l
 
 v	Use to show update files of version
-	inside a page
+	inside a page in combination with
+	parameter p.
 	For example: update.php?p=HELP&v=0.1
 
 # ---------------------------------------

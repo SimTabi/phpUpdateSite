@@ -72,6 +72,26 @@
 		foreach( getPages() as $page )		
 			print $page."<br>";
 		
+	} elseif( array_key_exists('l', $_GET) ){
+	
+		// show lates version update files
+		$url = curPageURL();
+		$page = $_GET['p'];
+		$versions = getVersions($page);
+		
+		if( count($versions) > 0 ){
+			foreach( getUpdateFiles($page, $versions[0]) as $file )
+				print $url."/".$file . "<br>";
+		}
+	} elseif( array_key_exists('lv', $_GET) ){
+		
+		// show latest version number
+		$page = $_GET['p'];
+		$versions = getVersions($page);
+		
+		if( count($versions) > 0 )
+			print $versions[0];
+		
 	} elseif(!array_key_exists('v', $_GET)){
 		
 		// show versions
